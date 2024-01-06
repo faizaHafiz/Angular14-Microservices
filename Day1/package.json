@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "axios": "^0.27.2",
+    "seneca": "^3.26.2",
+    "seneca-entity": "^16.4.0",
+    "seneca-mongo-store": "^4.0.0"
+  }
+}

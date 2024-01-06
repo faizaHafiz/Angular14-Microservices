@@ -1,0 +1,42 @@
+<section class="container">
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="title" class="form-label">Enter Title</label>
+          <input type="text" [(ngModel)]="title" name="title" class="form-control" id="title">
+        </div>
+        <div class="col-md-6">
+          <label for="category" class="form-label">Enter Category</label>
+          <input type="text" [(ngModel)]="category" name="category" class="form-control" id="category">
+        </div>
+        <div class="col-md-6">
+            <label for="rating" class="form-label">Select Rating</label>
+            <div class="form-check">
+                <input class="form-check-input"  value="good" type="radio" [(ngModel)]="rating" name="rating" id="good">
+                <label class="form-check-label" for="good">
+                  Good
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" value="" type="radio" [(ngModel)]="rating" name="rating" id="moderate">
+                <label class="form-check-label" for="moderate">
+                  Moderate
+                </label>
+              </div>
+          </div>
+        <div class="col-12" style="text-align: center;">
+          <button type="submit" class="btn btn-primary" (click)="FilterByCategory()">Filter</button>
+        </div>
+      </form>
+</section>
+<section class="container mt-5">
+    <section class="text-center m-5" *ngFor="let book of books" style="display:inline-block;">
+        <img [src]="book.thumbnailUrl" alt="" height="150" width="150">
+          <p>Rating: {{book.rating}}</p>
+          <p>Category: {{book.category}}</p>
+          <p>Title: {{book.title}}</p>
+    </section>
+  </section>
+
+
+
+

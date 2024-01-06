@@ -1,0 +1,23 @@
+<section class="container">
+  <h1 style="text-align: center;">Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" name="username" formControlName="username">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input  type="password" class="form-control" id="password" name="password" formControlName="password" />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+</form>
+</section>
+
+<!-- <p class="container pt-3">{{users}}</p>
+<p>{{loggedIn}}</p> -->
+
+
+
+
+
+
